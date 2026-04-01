@@ -103,7 +103,7 @@ export default function Home() {
       <div className="glow-orb w-80 h-80 bg-purple-600 bottom-[-150px] right-[-50px] fixed" />
       <div className="glow-orb w-64 h-64 bg-teal-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fixed opacity-[0.05]" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-8">
+      <div className="relative z-10 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <header className="text-center mb-10 animate-fadeIn">
           <div className="flex items-center justify-center gap-3 mb-3">
@@ -142,7 +142,7 @@ export default function Home() {
         </header>
 
         {/* Chat Input */}
-        <section className="max-w-2xl mx-auto mb-8 animate-fadeIn" style={{ animationDelay: "0.1s" }}>
+        <section className="max-w-3xl mx-auto mb-8 animate-fadeIn" style={{ animationDelay: "0.1s" }}>
           <ChatInput
             onSubmit={handleQuery}
             isLoading={isLoading}
@@ -151,7 +151,7 @@ export default function Home() {
         </section>
 
         {/* Streaming Status */}
-        <section className="max-w-2xl mx-auto">
+        <section className="max-w-3xl mx-auto">
           <StreamingStatus agents={agents} isStreaming={isLoading} />
         </section>
 
@@ -171,7 +171,7 @@ export default function Home() {
                 </button>
               )}
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {panels.map((panel) => (
                 <DashboardPanelComponent
                   key={panel.id}
