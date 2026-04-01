@@ -142,7 +142,7 @@ export default function Home() {
         </header>
 
         {/* Chat Input */}
-        <section className="max-w-3xl mx-auto mb-8 animate-fadeIn" style={{ animationDelay: "0.1s" }}>
+        <section className="max-w-5xl mx-auto mb-8 animate-fadeIn" style={{ animationDelay: "0.1s" }}>
           <ChatInput
             onSubmit={handleQuery}
             isLoading={isLoading}
@@ -151,7 +151,7 @@ export default function Home() {
         </section>
 
         {/* Streaming Status */}
-        <section className="max-w-3xl mx-auto">
+        <section className="max-w-5xl mx-auto">
           <StreamingStatus agents={agents} isStreaming={isLoading} />
         </section>
 
@@ -186,14 +186,14 @@ export default function Home() {
         {/* Empty State */}
         {panels.length === 0 && !isLoading && (
           <section className="text-center mt-16 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-            <div className="space-y-4 max-w-sm mx-auto">
+            <div className="space-y-4 max-w-2xl mx-auto">
               <div className="text-4xl animate-float" style={{ animationDelay: "0.5s" }}>🎯</div>
               <h3 className="text-lg font-medium text-gray-400">Ready to explore your data</h3>
               <p className="text-sm text-gray-600">
                 Type a question above or click a suggestion to get started.
                 Each query creates a live dashboard panel with charts and insights.
               </p>
-              <div className="grid grid-cols-2 gap-3 mt-6 text-left">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 text-left">
                 {[
                   { icon: "🔍", label: "Natural Language", desc: "Ask in plain English" },
                   { icon: "🤖", label: "Multi-Agent", desc: "4 AI agents collaborate" },
